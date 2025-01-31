@@ -11,7 +11,7 @@ CREATE TABLE Countries (
 -- Create a table for caching GeoIP data (Columns: ID, IP Range, CountryID)
 CREATE TABLE GeoIPCache (
     ID INT,
-    IPRange INT,
+    IPRange VARCHAR(50),
     CountryID INT,
     PRIMARY KEY (ID),
     FOREIGN KEY (CountryID) REFERENCES Countries(ID) ON DELETE NO ACTION
@@ -24,7 +24,6 @@ CREATE TABLE ProductDescription (
     ProductID INT,
     CountryID INT,
     PRIMARY KEY (ID),
-    FOREIGN KEY (CountryID) REFERENCES Countries(ID) ON DELETE NO ACTION
 ) ENGINE=MyISAM;
 
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
