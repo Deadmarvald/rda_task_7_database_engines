@@ -23,7 +23,7 @@ CREATE TABLE ProductDescription (
     Description VARCHAR(200),
     ProductID INT,
     CountryID INT,
-    PRIMARY KEY (ID),
+    PRIMARY KEY (ID)
 ) ENGINE=MyISAM;
 
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
